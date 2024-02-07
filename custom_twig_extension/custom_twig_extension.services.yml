@@ -1,0 +1,9 @@
+services:
+  custom_twig_extension.twig.array_count:
+      class: Drupal\custom_twig_extension\ArrayCount
+      tags:
+        - { name: twig.extension }
+  custom_twig_extension.trig.mediaurl:
+      class: Drupal\custom_twig_extension\MediaUrl
+      tags:
+        - { name: twig.extension }

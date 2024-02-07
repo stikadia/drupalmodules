@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function custom_twig_extension_install() {
+  // Check if the image style already exists.
+  $style_exists = \Drupal::entityTypeManager()->getStorage('image_style')->load('customwebp');
+
+  // Create the image style only if it does not already exist.
+  if (!$style_exists) {
+    $style = \Drupal\image\Entity\ImageStyle::create([
+      'name' => 'customwebp',
+      'label' => t('Custom WebP'),
+      'effects' => [
+        // Add the WebP conversion effect.
+        [
+          'id' => 'image_scale_and_crop',
+          'data' => [
+            'width' => NULL,
+            'height' => NULL,
+            'upscale' => 0,
+            'crop' => 'none',
+          ],
+        ],
+        [
+          'id' => 'webp_convert',
+        ],
+      ],
+    ]);
+    $style->save();
+  }
+}
