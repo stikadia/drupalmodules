@@ -15,4 +15,4 @@ Module 1: Custom Twig Extension
 - How to use it? If the media id of image is "3". Then
    **<img src="{{ 3|media_url }}" />** this will return full url of image/media like "http://YOURWEBSITE/sites/default/files/imagename.jpg"
   Same way you can get media url for PDF/Text/Video files.
-==================================
+
