@@ -1,0 +1,25 @@
+custom_api.list_data:
+  path: '/ia-api/listdata/{content_type}'
+  defaults:
+    _controller: '\Drupal\custom_api\Controller\CustomApiController::listData'
+    _title: 'List Data'
+  requirements:
+    _permission: 'access content'
+
+custom_api.newapi:
+  path: '/ia-api/getToken'
+  defaults:
+    _title: 'Get Token'
+    _controller: '\Drupal\custom_api\Controller\GetTokenController::login'
+  methods: [POST]
+  requirements:
+    _permission: 'access content'
+
+
+custom_api.token:
+  path: '/ia-api/displayToken'
+  defaults:
+    _title: 'Get Token'
+    _controller: '\Drupal\custom_api\Controller\GetTokenController::getToken'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,8 @@
+services:
+  custom_api.controller:
+    class: Drupal\custom_api\Controller\CustomApiController
+    arguments:
+      - '@entity_type.manager'
+      - '@url_generator'
+    tags:
+      - { name: controller.service_arguments }
