@@ -78,5 +78,9 @@ This module provides custom API endpoints in Drupal for user authentication and 
 ## License
 This module is licensed under the GNU General Public License, version 2 or later.
 
+## Author
+
+This module is authored by Sharad Tikadia.
+
 
   
