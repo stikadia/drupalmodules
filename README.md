@@ -15,3 +15,7 @@ This module offers a quick API solution for all content types within a Drupal si
 ### Description:
 Automatically logs out users after a specified period of inactivity.
 
+## Author
+
+These modules are authored and managed by Sharad Tikadia.
+
