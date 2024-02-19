@@ -30,3 +30,7 @@ The `AutoLogoutSettingsForm` class defines the form used for configuring the ses
 
 This module is licensed under the [GNU General Public License v2.0](link-to-license).
 
+## Author
+
+This module is authored by Sharad Tikadia.
+
