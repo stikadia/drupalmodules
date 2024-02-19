@@ -14,3 +14,7 @@
 - Now you can use this id to attach that asset in your custom HTML/Layout pages.
 - How to use it? If the media id of an image is "3", then ``<img src="{{ 3|media_url }}" />`` this will return the full URL of the image/media like "http://YOURWEBSITE/sites/default/files/imagename.jpg".
   Similarly, you can get media URLs for PDF/Text/Video files.
+
+## Author
+
+This module is authored by Sharad Tikadia.
