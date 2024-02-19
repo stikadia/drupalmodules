@@ -1,0 +1,116 @@
+<?php
+
+use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function auto_logout_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.auto_logout':
+      return '<p>' . t('Automatically logs out users after a specified period of inactivity.') . '</p>';
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function auto_logout_menu() {
+  $items['admin/config/system/custom-logout'] = array(
+    'title' => 'Auto Logout',
+    'description' => 'Configure auto logout settings.',
+    'route_name' => 'auto_logout.settings',
+    'weight' => 20,
+    'context' => \Drupal\Core\Routing\RouteBuildEvent::getContext(RouteProviderInterface::ROUTE_PROVIDER_PRIORITY),
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_route().
+ */
+function auto_logout_routes() {
+  $routes = array();
+
+  $routes['auto_logout.settings'] = new Route(
+    '/admin/config/system/custom-logout',
+    array(
+      '_form' => '\Drupal\auto_logout\Form\AutoLogoutSettingsForm',
+      '_title' => 'Auto Logout Settings',
+    ),
+    array(
+      '_permission' => 'administer site configuration',
+    )
+  );
+
+  return $routes;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function auto_logout_permission() {
+  return array(
+    'administer site configuration' => array(
+      'title' => t('Administer site configuration'),
+      'description' => t('Perform administration tasks for the site.'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for the user_login_form.
+ */
+function auto_logout_form_user_login_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Add a custom submit handler to the user login form.
+  $form['#submit'][] = 'auto_logout_user_login_form_submit';
+}
+
+/**
+ * Custom submit handler for the user login form.
+ */
+function auto_logout_user_login_form_submit(&$form, FormStateInterface $form_state) {
+  // Reset the user's session timestamp on successful login.
+  \Drupal::service('session_manager')->setTimestamp(REQUEST_TIME);
+}
+
+/**
+ * Implements hook_cron().
+ */
+function auto_logout_cron() {
+  $auto_logout_config = \Drupal::config('auto_logout.settings');
+  $session_timeout = $auto_logout_config->get('session_timeout');
+
+  if ($session_timeout > 0) {
+    $session_manager = \Drupal::service('session_manager');
+    $session_lifetime = $session_manager->getLifetime();
+
+    if ($session_lifetime > $session_timeout) {
+      $session_manager->setLifetime($session_timeout);
+    }
+  }
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function auto_logout_requirements($phase) {
+  $requirements = array();
+
+  if ($phase == 'install') {
+    $auto_logout_config = \Drupal::config('auto_logout.settings');
+    $session_timeout = $auto_logout_config->get('session_timeout');
+
+    if ($session_timeout <= 0) {
+      $requirements['auto_logout'] = array(
+        'title' => 'Auto Logout',
+        'description' => t('The Auto Logout session timeout must be greater than zero.'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+    }
+  }
+
+  return $requirements;
+}
