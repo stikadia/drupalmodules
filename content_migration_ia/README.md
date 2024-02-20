@@ -28,10 +28,6 @@ To export content as a CSV file, follow these steps:
 3. Upload the CSV file using the provided form.
 4. Click the "Import" button to initiate the content import process.
 
-## License
-
-This module is licensed under the [GNU General Public License v2.0](link-to-license).
-
 ## Author
 
 This module is authored by Sharad Tikadia.
