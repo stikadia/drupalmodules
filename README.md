@@ -20,6 +20,11 @@ Automatically logs out users after a specified period of inactivity.
 ### Description:
 This versatile module empowers users to seamlessly manage their content within Drupal by facilitating both the EXPORT and IMPORT of data across various content types in CSV format. With robust capabilities, it enables users to efficiently add or update existing data, ensuring a streamlined workflow. Moreover, it provides comprehensive support for essential functionalities such as image and file UPLOAD, dynamic path UPDATES, taxonomy management, and SEO meta data enhancements. Whether it's enriching content or optimizing metadata, this module offers a comprehensive solution for content management within Drupal, empowering users to efficiently manage their digital assets with ease..
 
+## Module 5: Custom Lead Transfer
+
+### Description:
+Sample code to transfer all webform leads to custom mysql table. 
+
 ## Author
 
 These modules are authored and managed by Sharad Tikadia.
