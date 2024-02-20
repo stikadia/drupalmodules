@@ -1,0 +1,9 @@
+content_migration_ia.migration:
+  route_name: content_migration_ia.migration
+  base_route: system.admin_content
+  title: 'Export CSV'
+
+content_migration_ia.import:
+  route_name: content_migration_ia.import
+  base_route: system.admin_content
+  title: 'Import CSV'

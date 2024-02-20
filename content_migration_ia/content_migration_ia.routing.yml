@@ -1,0 +1,14 @@
+content_migration_ia.migration:
+  path: '/admin/content-migration-ia'
+  defaults:
+    _form: '\Drupal\content_migration_ia\Form\MigrationForm'
+    _title: 'Export Content'
+  requirements:
+    _permission: 'admin content'
+content_migration_ia.import:
+  path: '/admin/content-migration-ia/import'
+  defaults:
+    _form: '\Drupal\content_migration_ia\Form\ImportForm'
+    _title: 'Import Content'
+  requirements:
+    _permission: 'admin content'
