@@ -15,6 +15,11 @@ This module offers a quick API solution for all content types within a Drupal si
 ### Description:
 Automatically logs out users after a specified period of inactivity.
 
+## Module 4: Content Export Import
+
+### Description:
+This versatile module empowers users to seamlessly manage their content within Drupal by facilitating both the EXPORT and IMPORT of data across various content types in CSV format. With robust capabilities, it enables users to efficiently add or update existing data, ensuring a streamlined workflow. Moreover, it provides comprehensive support for essential functionalities such as image and file UPLOAD, dynamic path UPDATES, taxonomy management, and SEO meta data enhancements. Whether it's enriching content or optimizing metadata, this module offers a comprehensive solution for content management within Drupal, empowering users to efficiently manage their digital assets with ease..
+
 ## Author
 
 These modules are authored and managed by Sharad Tikadia.
