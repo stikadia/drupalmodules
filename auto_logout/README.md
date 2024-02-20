@@ -26,10 +26,6 @@ The `AutoLogoutSettingsForm` class defines the form used for configuring the ses
 - `validateForm()`: Validates the form submission, ensuring that the session timeout value is greater than zero.
 - `submitForm()`: Saves the form submission by setting and saving the session timeout configuration value.
 
-## License
-
-This module is licensed under the [GNU General Public License v2.0](link-to-license).
-
 ## Author
 
 This module is authored by Sharad Tikadia.
