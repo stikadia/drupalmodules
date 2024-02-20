@@ -1,0 +1,9 @@
+custom_lead_transfer.syncleads:
+  path: 'admin/syncleads'
+  defaults:
+    _controller: '\Drupal\custom_lead_transfer\Controller\SyncleadsController::syncleads'
+    _title: 'Sync Webform Leads to Custom Table'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    _access: 'TRUE'

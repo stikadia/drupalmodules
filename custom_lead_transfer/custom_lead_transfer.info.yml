@@ -1,0 +1,7 @@
+name: Custom Lead Transfer
+type: module
+description: This module is sample on how to transfer webform leads to custom table in mysql
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - webform
