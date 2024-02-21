@@ -212,6 +212,10 @@ class ImportForm extends FormBase
 					$allValues = explode("<SEPERATOR>", $value);
 
 					if ($field_type == "image" || $field_type == 'file') {
+						if(trim($fileurl)=='')
+						{
+							continue;
+						}
 						$directory_pattern = $field_definition->getSetting('file_directory');
 						$directory = $this->getDirectoryName($directory_pattern);
 						$fidArr = [];
