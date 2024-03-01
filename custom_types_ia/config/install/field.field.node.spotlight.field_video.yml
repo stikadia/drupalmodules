@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.spotlight
+  module:
+    - file
+id: node.spotlight.field_video
+field_name: field_video
+entity_type: node
+bundle: spotlight
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: spotlight
+  file_extensions: 'mp4 mov avi mkv wmv flv webm mpeg mpg 3gp m4v ogg rm rmvb ts vob asf'
+  max_filesize: ''
+  description_field: false
+field_type: file

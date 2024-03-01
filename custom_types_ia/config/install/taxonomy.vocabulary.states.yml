@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: States
+vid: states
+description: 'Manage states data'
+weight: 0

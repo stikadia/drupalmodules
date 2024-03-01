@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Press Release Category'
+vid: press_release_category
+description: ''
+weight: 0

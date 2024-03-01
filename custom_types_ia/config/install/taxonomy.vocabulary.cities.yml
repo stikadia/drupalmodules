@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: Cities
+vid: cities
+description: 'Manage cities data'
+weight: 0

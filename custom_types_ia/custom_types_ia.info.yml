@@ -1,0 +1,12 @@
+name: 'Default Content Types'
+type: module
+description: 'Creates default content types which are mostly used in all the projects'
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:field
+  - token:token
+  - drupal:metatag
+  - drupal:admin_toolbar
+  - drupal:admin_toolbar_tools
+  - drupal:statistics

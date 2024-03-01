@@ -1,0 +1,28 @@
+<?php 
+/**
+ * Implements hook_install().
+ */
+function custom_types_ia_install() {
+  
+
+  // List of cache tables.
+  $cache_tables = [
+    'cache_bootstrap',
+    'cache_config',
+    'cache_container',
+    'cache_data',
+    'cache_default',
+    'cache_discovery',
+    'cache_entity',
+    'cache_menu',
+    'cache_render',
+    //'cache_toolbar',
+    // Add more cache tables as needed.
+  ];
+
+  // Truncate each cache table.
+  foreach ($cache_tables as $table) {
+    \Drupal::database()->truncate($table)->execute();
+  }
+ 
+}

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - text
+    - node
+id: node.blogs.body
+field_name: body
+entity_type: node
+bundle: blogs
+label: 'Body'
+description: 'The main content of the blog post.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  text_processing: 'filtered_html'
+field_type: text_with_summary
