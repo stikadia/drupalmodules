@@ -25,6 +25,11 @@ This versatile module empowers users to seamlessly manage their content within D
 ### Description:
 Sample code to transfer all webform leads to custom mysql table. 
 
+## Module 6: Custom Types Module
+
+### Description:
+This module is used create common content types, taxonomies and views which are mostly used while developing any new website. 
+
 ## Author
 
 These modules are authored and managed by Sharad Tikadia.
