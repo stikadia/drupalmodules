@@ -34,5 +34,3 @@ This module is used to create common content types, taxonomies and views which a
   - Search Listing (page)
 
 ## Author - Sharad Tikadia
-
-This module is authored by Sharad Tikadia.
