@@ -1,5 +1,5 @@
 name: 'Custom Twig Extension'
 type: module
-description: 'My Awesome Module'
+description: 'Custom twig token module'
 core_version_requirement: ^9 || ^10
 package: 'Custom'
