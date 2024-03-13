@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+name: customwebp
+label: customwebp
+effects:
+  007caec1-3a71-4ebe-bccd-2d32dcc28013:
+    uuid: 007caec1-3a71-4ebe-bccd-2d32dcc28013
+    id: image_convert
+    weight: 1
+    data:
+      extension: webp
