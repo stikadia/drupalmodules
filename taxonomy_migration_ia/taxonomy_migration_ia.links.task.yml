@@ -1,0 +1,9 @@
+taxonomy_migration_ia.migration:
+  route_name: taxonomy_migration_ia.migration
+  base_route: system.admin_content
+  title: 'Export Taxonomies'
+
+taxonomy_migration_ia.import:
+  route_name: taxonomy_migration_ia.import
+  base_route: system.admin_content
+  title: 'Import Taxonomies'

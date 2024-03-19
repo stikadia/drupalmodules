@@ -1,0 +1,14 @@
+taxonomy_migration_ia.migration:
+  path: '/admin/structure/content-migration-ia'
+  defaults:
+    _form: '\Drupal\taxonomy_migration_ia\Form\MigrationForm'
+    _title: 'Export Taxonomies'
+  requirements:
+    _permission: 'admin content'
+taxonomy_migration_ia.import:
+  path: '/admin/structure/content-migration-ia/import'
+  defaults:
+    _form: '\Drupal\taxonomy_migration_ia\Form\ImportForm'
+    _title: 'Import Taxonomies'
+  requirements:
+    _permission: 'admin content'
