@@ -30,6 +30,16 @@ Sample code to transfer all webform leads to custom mysql table.
 ### Description:
 This module is used create common content types, taxonomies and views which are mostly used while developing any new website. 
 
+## Module 7: Taxonomies export/import using CSV file format
+
+### Description:
+This module is used export taxonomies data in CSV format and import data from CSV to particular vocabulary. 
+
+## Module 8: Block type data export/import using CSV file format
+
+### Description:
+This module is used export block type data in CSV format and import data from CSV to particular block type.
+
 ## Author
 
 These modules are authored and managed by Sharad Tikadia.
