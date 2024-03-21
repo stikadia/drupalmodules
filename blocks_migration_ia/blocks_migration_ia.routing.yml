@@ -6,7 +6,7 @@ blocks_migration_ia.migration:
   requirements:
     _permission: 'admin content'
 blocks_migration_ia.import:
-  path: '/admin/structure/content-migration-ia/import'
+  path: '/admin/structure/block/content-migration-ia/import'
   defaults:
     _form: '\Drupal\blocks_migration_ia\Form\ImportForm'
     _title: 'Import Blocks'
