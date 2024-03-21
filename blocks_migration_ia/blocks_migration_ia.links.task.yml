@@ -5,5 +5,5 @@ blocks_migration_ia.migration:
 
 blocks_migration_ia.import:
   route_name: blocks_migration_ia.import
-  base_route: system.admin_content4
+  base_route: system.admin_content
   title: 'Import Blocks'
