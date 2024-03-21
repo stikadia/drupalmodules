@@ -1,0 +1,14 @@
+blocks_migration_ia.migration:
+  path: '/admin/structure/block/content-migration-ia'
+  defaults:
+    _form: '\Drupal\blocks_migration_ia\Form\MigrationForm'
+    _title: 'Export Blocks'
+  requirements:
+    _permission: 'admin content'
+blocks_migration_ia.import:
+  path: '/admin/structure/content-migration-ia/import'
+  defaults:
+    _form: '\Drupal\blocks_migration_ia\Form\ImportForm'
+    _title: 'Import Blocks'
+  requirements:
+    _permission: 'admin content'

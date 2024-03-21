@@ -1,0 +1,8 @@
+name: Block's Content Migration IA
+type: module
+description: This module is used to export/import content of blocks in csv format.
+package: Custom
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:field
+  - drupal:file

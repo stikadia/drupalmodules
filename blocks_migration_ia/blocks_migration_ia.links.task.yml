@@ -1,0 +1,9 @@
+blocks_migration_ia.migration:
+  route_name: blocks_migration_ia.migration
+  base_route: system.admin_block
+  title: 'Export Blocks'
+
+blocks_migration_ia.import:
+  route_name: blocks_migration_ia.import
+  base_route: system.admin_block
+  title: 'Import Blocks'
